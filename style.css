@@ -74,6 +74,9 @@ nav a{
         opacity: 1;
     }
 }
+.image-section{
+    width: 30%;
+}
 
 button{
     background-color: #b87b00 !important;
@@ -87,17 +90,43 @@ button{
 
 }
 .verify {
-    color: #996600;
+    color: #b87b00;
     font-family: 'Gloria Hallelujah', cursive;
 
 }
 
 label{
-    color: #996600;
+    color: #b87b00;
 }
 select{
-    color: #996600 !important;
+    color: #b87b00 !important;
 }
 ::placeholder{
-    color: #996600 !important;
+    color: #b87b00 !important;
 }
+.hide{
+    color: #b87b00;
+    font-family: 'Gloria Hallelujah', cursive;
+    display: none;
+
+}
+.finish{
+    background: #996600;
+    color: #fff !important;
+}
+.follow i{
+    padding: 0 10px;
+    font-size: 2rem;
+    color: #fff;
+}
+.tweet:hover{
+    color:rgba(29,161,242,1.00);
+}
+.fb:hover{
+    color: #385898;;
+}
+.ig:hover{
+    color:#d03b5c;
+}
+
+   
