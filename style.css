@@ -1,8 +1,7 @@
-/* body{
-    font-family: 'Gloria Hallelujah', cursive;
-
+body{
+background-color: black;
     
-} */
+}
 
 nav a{
     color: #996600 !important;
@@ -79,4 +78,26 @@ nav a{
 button{
     background-color: #b87b00 !important;
     border-radius: 20px !important;
+}
+.card:hover{
+    box-shadow: 0px 5px 20px 0px  #b87b00 ;
+    transition: all .2s ease-in-out;
+    transition-duration: .2s;
+    transform: scale(1.03);
+
+}
+.verify {
+    color: #996600;
+    font-family: 'Gloria Hallelujah', cursive;
+
+}
+
+label{
+    color: #996600;
+}
+select{
+    color: #996600 !important;
+}
+::placeholder{
+    color: #996600 !important;
 }
