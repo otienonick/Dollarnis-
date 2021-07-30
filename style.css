@@ -105,10 +105,15 @@ select{
     color: #b87b00 !important;
 }
 .hide{
-    color: #b87b00;
     font-family: 'Gloria Hallelujah', cursive;
     display: none;
+}
+.hide th,h3{
+        color: #b87b00 !important;
 
+}
+ .hide td{
+    color: #fff !important;
 }
 .finish{
     background: #996600;
