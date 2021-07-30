@@ -14,11 +14,17 @@ nav a{
 
 
 }
-.foodie h5,h4{
+.foodie h5,h2{
     font-family: 'Gloria Hallelujah', cursive;
     color: #996600;
 
 }
+/* #menu-area{
+    font-family: 'Gloria Hallelujah', cursive;
+    color: #996600;
+
+
+} */
 .foodie p{
     font-family: 'Gloria Hallelujah', cursive;
 
@@ -93,6 +99,14 @@ button{
     color: #b87b00;
     font-family: 'Gloria Hallelujah', cursive;
 
+}
+.bouncing{
+    animation: bounce ease 2.5s infinite;
+}
+@keyframes bounce {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
 }
 
 label{
