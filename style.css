@@ -1,10 +1,27 @@
+/* body{
+    font-family: 'Gloria Hallelujah', cursive;
+
+    
+} */
 
 nav a{
     color: #996600 !important;
+    font-family: 'Gloria Hallelujah', cursive;
+
 }
 .land{
     background: url('./pics/get-me-a-pizza-18.gif');
     background-position: center;
+
+
+}
+.foodie h5,h4{
+    font-family: 'Gloria Hallelujah', cursive;
+    color: #996600;
+
+}
+.foodie p{
+    font-family: 'Gloria Hallelujah', cursive;
 
 }
  .move h1{
@@ -14,7 +31,8 @@ nav a{
  .move{
      margin-top: 21%;
      color: #fff;
- }
+     font-family: 'Gloria Hallelujah', cursive;
+     }
    .right{
     animation: fromRight 3s;
     animation-delay: 1s;
