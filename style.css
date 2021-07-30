@@ -1,0 +1,59 @@
+
+nav a{
+    color: #996600 !important;
+}
+.land{
+    background: url('./pics/get-me-a-pizza-18.gif');
+    background-position: center;
+
+}
+ .move h1{
+     font-size: 3rem;
+ } 
+  
+ .move{
+     margin-top: 21%;
+     color: #fff;
+ }
+   .right{
+    animation: fromRight 3s;
+    animation-delay: 1s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes fromRight {
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    50%{
+        transform: translateX(-100px)
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.left{
+    animation: fromLeft 3s;
+    animation-delay: 1s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes fromLeft {
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    50%{
+        transform: translateX(100px)
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
