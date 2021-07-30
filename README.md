@@ -3,7 +3,7 @@
  #### Nick Otieno
 
 ## Project Description
-### a website  for a fictional pizza shop.
+### a website  for a fictional pizza restaurant.
 
 
 ## Technologies Used;
