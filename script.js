@@ -26,6 +26,7 @@ Total.prototype.totalCash = function() {
 $(document).ready(function () {
     $("form#myform").submit(function(event) {
         event.preventDefault();
+        var myName = $('#myName').val();
     
 
             var pizzaSize = $('#size').val();
@@ -42,7 +43,33 @@ $(document).ready(function () {
             
             }
 
+
             var pizzaCrust = $('#crust').val();
+             var myCrust = crustiePrice()
+
+            function crustiePrice(){
+                if(pizzaCrust==='Cracker'){
+                    return 250;
+                }else if(pizzaCrust==='Stuffed'){
+                    return 200;
+
+                }else if(pizzaCrust==='Cheese'){
+                    return 250;
+
+                }else if(pizzaCrust==='Magherita'){
+                    return 300;
+
+                }else if(pizzaCrust==='Thick'){
+                    return 200;
+
+                }else if(pizzaCrust==='FlatBread'){
+                     250;
+
+                }else if(pizzaCrust==='Thick'){
+                    return 200;
+
+                }
+            }
 
             var pizzaTopping = checkedToppings();
 
@@ -68,17 +95,16 @@ $(document).ready(function () {
 
             var mySize = price()
 
-            var myCrust = 150;
 
             var myTopping =checkBox();
 
              function checkBox(){
                 var chb = document.getElementsByName('mole');
                 var box1 = 150;
-                var box2 = 130;
-                var box3 = 120;
-                var box4 = 180;
-                var box5 = 150;
+                var box2 = 180;
+                var box3 = 150;
+                var box4 = 100;
+                var box5 = 130;
                 var box6 = 100;
 
                      
@@ -116,8 +142,9 @@ $(document).ready(function () {
             var check = checkBox();     
         
        var  newTotal= new Total(pizzaQuantity,mySize,myCrust,myTopping);
-       if( pizzaSize !='' &&  pizzaCrust != ''  && pizzaQuantity !='' && check  ){
+       if( myName!='' && pizzaSize !='' &&  pizzaCrust != ''  && pizzaQuantity !='' && check  ){
         $('.hide').fadeIn();
+        $('.image-section').hide();
         $('#pizzSize').text( pizzaSize);
         $('#pizzCrust').text( pizzaCrust);
         $('#pizzTopping').text( pizzaTopping);
@@ -129,4 +156,44 @@ $(document).ready(function () {
     }
 
         });
+        $('#show-locate').click(function(){
+            $('.locateMe').slideToggle();
+        })
+
+
+    
     });
+
+    function validate() {
+   
+        var myLocation = document.getElementById('locate').value;
+        var myName = $('#myName').val();
+
+    
+        if (myLocation != '') {
+           document.getElementById('show-saved').innerHTML = myName + " our delivery services to " + myLocation + " is Ksh 200." 
+           $('.showing').slideToggle()
+              $(document).on('click', '#submit-btn', function(e){
+                 e.preventDefault();
+             });
+           
+      
+        }
+        else{ 
+             return false;
+        
+            }
+           
+    
+    }
+    
+
+
+
+
+// function taken(){
+//     var myName = document.getElementById('name');
+//     var myEmail = document.getElementById('email');
+
+//      document.getElementById('takeMe').click(  window.location = 'https://www.google.com/' ,myName.value = '' , myEmail.value = "")
+// }
