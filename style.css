@@ -2,6 +2,9 @@ body{
 background-color: black;
     
 }
+nav{
+    background: black;
+}
 
 nav a{
     color: #996600 !important;
