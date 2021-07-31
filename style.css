@@ -103,6 +103,20 @@ button{
     50%  { transform: translateY(-20px); }
     100% { transform: translateY(0); }
 }
+.text-area{
+    font-size: 3rem;
+    color: #b87b00;
+    font-family: 'Gloria Hallelujah', cursive;
+
+}
+.rider{
+    color: #fff;
+}
+.locateMe{
+    display: none;
+}
+
+
 
 label{
     color: #b87b00;
@@ -130,7 +144,7 @@ select{
 }
 .follow i{
     padding: 0 10px;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: #fff;
 }
 .tweet:hover{
@@ -142,5 +156,3 @@ select{
 .ig:hover{
     color:#d03b5c;
 }
-
-   
