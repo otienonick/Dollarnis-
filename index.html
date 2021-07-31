@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"> -->
 <link rel="stylesheet" href="./style.css">
 <link href="https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
@@ -180,6 +181,60 @@
               </div>
               </div>
 
+              <div class="container texted mb-5">
+                <table class="table table-bordered border-light text-white caption-top">
+                  <caption class="text-area" >MENU PRICE-LIST</caption>
+                  <thead>
+                    <tr>
+                      <th scope="col">Pizza-size</th>
+                      <th scope="col">Toppings</th>
+                      <th scope="col">Crust</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">Large@1200 Ksh</th>
+                      <td>Pepperoni@150 Ksh</td>
+                      <td>Cracker@250 Ksh</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Medium@800 Ksh</th>
+                      <td>Mushrooms@180 Ksh</td>
+                      <td>Staffed@200 Ksh</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">Small@500</th>
+                      <td>Bacon@150 Ksh</td>
+                      <td>Cheese@250 Ksh</td>
+                    </tr>
+                    <tr>
+                    <th scope="row"></th>
+                    <td>Green Peppers@100 Ksh</td>
+                    <td>Margherita@300 Ksh</td>
+                  </tr>
+                  <tr>
+                    <th scope="row"></th>
+                    <td>Sausage@130 Ksh</td>
+                    <td>Thick@200 Ksh</td>
+                  </tr>
+                  <tr>
+                    <th scope="row"></th>
+                    <td>Onions@100 Ksh</td>
+                    <td>the Flat Bend@250 Ksh</td>
+                  </tr>
+                  <tr>
+                    <th scope="row"></th>
+                    <td></td>
+                    <td>Thin@200 Ksh</td>
+                  </tr>
+                  </tbody>
+                </table>
+
+
+
+
+              </div>
+
 <div   id="order"  class="container mb-5 verify">
     <div class="image-section float-end">
         <img  class="img-fluid" src="./pics/pizaa boy.gif" alt="">
@@ -205,13 +260,13 @@
     <div class="form-group" >
           <select class="form-select mb-3"  aria-label="Default select example" id="crust" oninvalid="this.setCustomValidity('Please choose a crust in the list')" oninput="this.setCustomValidity('')"   required>
               <option selected  value="">Choose crust</option>
-              <option>Cracker</option>
-             <option>Stuffed</option>
-             <option>Cheese</option>
-             <option>Margherita</option>
-             <option>Thick</option>
-             <option>Flat Bread</option>
-             <option>Thin</option>
+              <option value="Cracker">Cracker</option>
+             <option value="Stuffed">Stuffed</option>
+             <option value="Cheese">Cheese</option>
+             <option value="Magherita">Margherita</option>
+             <option value="Thick">Thick</option>
+             <option value="FlatBread">Flat Bread</option>
+             <option value="Thin">Thin</option>
           </select>
           </div>
 
@@ -275,7 +330,8 @@
   </div>
 </div>
 
-  <div class="container-fluid col-md-6 mb-5  mt-5 hide">
+  <div class="container-fluid col-md-9 mb-5  mt-5 hide">
+    <div class="container">
       <h3> ORDER SUMMARY</h3>
       <table class="table">
         <thead>
@@ -314,6 +370,23 @@
           </tr> -->
         </tbody>
       </table>
+      </div>
+
+  <div class="text-white">
+    <button id="show-locate" class="btn"><i class="bi bi-truck rider"></i></button>Want us to make a delivery?
+    <button class="btn m-3 text-white">Checkout</button>
+    </div>
+    <div class=" locateMe col-lg-4">
+  <form onsubmit="return false" class="showing">
+    <div class="mb-3">
+        <label for="name" class="form-label">Location</label>
+        <input type="text" name="locate" class="form-control" id="locate" oninvalid="this.setCustomValidity('Please fill out your location')" oninput="this.setCustomValidity('')"   required>
+    </div>
+    <button type="submit" class="btn btn-primary" onclick="validate()" id="submit-btn">Save</button>
+</form>
+<p class="text-white" id="show-saved"></p>
+</div>
+
   </div>
 
   <div id="contacts-area" class="container-fluid finish pt-5 text-center">
