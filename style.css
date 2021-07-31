@@ -107,7 +107,7 @@ button{
     100% { transform: translateY(0); }
 }
 .text-area{
-    font-size: 3rem;
+    font-size: 2rem;
     color: #b87b00;
     font-family: 'Gloria Hallelujah', cursive;
 
@@ -161,4 +161,59 @@ select{
 }
 .ig:hover{
     color:#d03b5c;
+}
+
+.up-btn {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    bottom: 25px;
+    right: 20px;
+    display: none;
+    background: #b87b00;
+    border: none;
+    border-radius: 50%;
+}
+
+.up-btn i {
+    display: inline-block;
+    color: #fff;
+}
+
+
+
+@media (max-width:720px) {
+    body {
+        font-size: 15px;
+    }
+    .texted{
+        font-size: 13px;
+        
+    }
+    .download{
+        display: none;
+        
+    }
+    .finish{
+        font-size: 0.7rem;
+    }
+    .follow i{
+        font-size: 0.7rem;
+    }
+    .move h1{
+        color: black;
+        font-size: 2rem;
+    }
+    .land{
+        background: url('./pics/get-me-a-pizza-18.gif');
+        background-position: center;
+        background-size: cover;
+        width: 60vh;
+        
+    }
+}
+@media (max-width:1050px) {
+    .move h1{
+        color: black;
+    }
 }
