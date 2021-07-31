@@ -373,12 +373,44 @@
       </div>
 
   <div class="text-white">
-    <button id="show-locate" class="btn"><i class="bi bi-truck rider"></i></button>Want us to make a delivery?
-    <button class="btn m-3 text-white">Checkout</button>
+
+    <!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Launch demo modal
+</button> -->
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">DOLLARNI'S PIZZA INN</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="colorful">
+        <h3>ORDER RECEIPT</h3>
+        <p id="each-size"></p>
+        <p id="each-crust"></p>
+       <p id="each-top"></p>
+       <p id="each-qty"></p>
+       <p id="each-total"></p>
+       <p id="each-text"></p>
+
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-secondary" onclick="window.location.reload();" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+    <button id="show-locate" value="200" class="btn"><i class="bi bi-truck rider"></i></button>Want us to make a delivery?
+    <button class="btn m-3 text-white" data-bs-toggle="modal" data-bs-target="#exampleModal" >Checkout</button>
     </div>
     <div class=" locateMe col-lg-4">
   <form onsubmit="return false" class="showing">
     <div class="mb-3">
+      <p class="text-white">Delivery fee is 200 Ksh</p>
+
         <label for="name" class="form-label">Location</label>
         <input type="text" name="locate" class="form-control" id="locate" oninvalid="this.setCustomValidity('Please fill out your location')" oninput="this.setCustomValidity('')"   required>
     </div>
