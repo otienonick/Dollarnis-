@@ -13,19 +13,45 @@ function Total(quantity, pizzaPrice,crustPrice,toppingPrice){
     this.pizzaPrice = pizzaPrice;
     this.crustPrice = crustPrice;
     this.toppingPrice = toppingPrice;
+    // this.shipping = shipping;
 
 
 
 Total.prototype.totalCash = function() {
-    return  this.quantity * (this.pizzaPrice + this.crustPrice + this.toppingPrice)
+    return  this.quantity * (this.pizzaPrice + this.crustPrice + this.toppingPrice )
 };
 };
 
+
+    function validate() {
+   
+        var myLocation = document.getElementById('locate').value;
+        var myName = $('#myName').val();
+
+    
+        if (myLocation != '') {
+           document.getElementById('show-saved').innerHTML = myName + " Lucky for you we are only 15 minutes away from " + myLocation +" !"
+           $('.showing').slideToggle()
+              $(document).on('click', '#submit-btn', function(e){
+                 e.preventDefault();
+             });
+           
+      
+        }
+        else{ 
+             return false;
+        
+            }
+           
+    
+    }
+    
 
 
 $(document).ready(function () {
     $("form#myform").submit(function(event) {
         event.preventDefault();
+        myShipping = parseInt($('#show-locate').val());
         var myName = $('#myName').val();
     
 
@@ -149,7 +175,17 @@ $(document).ready(function () {
         $('#pizzCrust').text( pizzaCrust);
         $('#pizzTopping').text( pizzaTopping);
         $('#pizzQuantity').text( pizzaQuantity);
-        $('#pizzTotal').text( newTotal.totalCash())
+        $('#pizzTotal').text( newTotal.totalCash());
+
+        $('#each-size').text( 'pizza-size : '+ pizzaSize);
+        $('#each-crust').text( 'Crust : ' + pizzaCrust);
+        $('#each-top').text( 'Toppings : ' + pizzaTopping);
+        $('#each-qty').text( 'Your order : ' + pizzaQuantity)
+        $('#each-total').text( 'Your total bill : ' + newTotal.totalCash());
+        $('#each-text').text('Thank You for choosing us to serve you ' + myName + ' !'); 
+
+        
+       
 
     }else{
         return false;
@@ -164,29 +200,7 @@ $(document).ready(function () {
     
     });
 
-    function validate() {
-   
-        var myLocation = document.getElementById('locate').value;
-        var myName = $('#myName').val();
 
-    
-        if (myLocation != '') {
-           document.getElementById('show-saved').innerHTML = myName + " our delivery services to " + myLocation + " is Ksh 200." 
-           $('.showing').slideToggle()
-              $(document).on('click', '#submit-btn', function(e){
-                 e.preventDefault();
-             });
-           
-      
-        }
-        else{ 
-             return false;
-        
-            }
-           
-    
-    }
-    
 
 
 
