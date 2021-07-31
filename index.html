@@ -185,18 +185,16 @@
         <img  class="img-fluid" src="./pics/pizaa boy.gif" alt="">
 
     </div>
-
-<div class="col-md-5 ">
-
+    <div class="col-md-5">
       <h2 class="text-center bouncing mb-3">ORDER NOW</h2>
+   
+   <form id="myform">
+    <div class="form-group">
+      <input type="text" id="myName" class="form-control mb-3" min="1" max="20"  placeholder="Name" oninvalid="this.setCustomValidity('Please input your name ')" oninput="this.setCustomValidity('')"  required>
+      </div>
 
-    <form id="myform">
-
-      <div class="form-group">
-        <input type="text" id="myName" class="form-control mb-3" min="1" max="20"  placeholder="Name" oninvalid="this.setCustomValidity('Please input your name ')" oninput="this.setCustomValidity('')"  required>
-        </div>
-    <div class="form-group mb-3 ">
-    <select class="form-select" id="size" oninvalid="this.setCustomValidity('Please select Pizza Size in the list')" oninput="this.setCustomValidity('')" aria-label="Default select example" required>
+   <div class="form-group mb-3 ">
+       <select class="form-select mb-3"  aria-label="Default select example" id="size" oninvalid="this.setCustomValidity('Please select Pizza Size in the list')" oninput="this.setCustomValidity('')"  required>
       <option value="" selected>Select size</option>
       <option value="Large">Large</option>
       <option value="Medium">Medium</option>
@@ -204,61 +202,76 @@
     </select>
     </div>
 
-    <div class="form-group " >
-          <select class="form-select mb-3"  aria-label="Default select example" id="crust" oninvalid="this.setCustomValidity('Please choose a crust in the list')" oninput="this.setCustomValidity('')"  required>
+    <div class="form-group" >
+          <select class="form-select mb-3"  aria-label="Default select example" id="crust" oninvalid="this.setCustomValidity('Please choose a crust in the list')" oninput="this.setCustomValidity('')"   required>
               <option selected  value="">Choose crust</option>
               <option>Cracker</option>
-              <option>Stuffed</option>
-              <option>Cheese</option>
-              <option>Margherita</option>
-              <option>Thick</option>
-              <option>Flat Bread</option>
-              <option>Thin</option>
-
-
+             <option>Stuffed</option>
+             <option>Cheese</option>
+             <option>Margherita</option>
+             <option>Thick</option>
+             <option>Flat Bread</option>
+             <option>Thin</option>
           </select>
           </div>
 
           <div class="form-group">
-          <select class="form-select mb-3"  aria-label="Default select example" id="topping" oninvalid="this.setCustomValidity('Please choose a topping  in the list')" oninput="this.setCustomValidity('')"  required>
-              <option value="" selected>Choose topping</option>
-              <option>Pepperoni </option>
-              <option>Mushrooms</option>
-              <option>Onions</option>
-              <option>Sausage</soption>
-              <option>Bacon</option>
-              <option >Green Peppers</option>
-          </select>
-          </div>
-          <div class="form-group">
-            <input type="number" id="quantity" class="form-control mb-3" min="1" max="20" placeholder="Quantity" oninvalid="this.setCustomValidity('Please indicate your desired quantity ')" oninput="this.setCustomValidity('')"  required>
+            <input type="number" id="quantity" class="form-control mb-3" min="1" max="20" placeholder="Quantity" oninvalid="this.setCustomValidity('How many pizzas do you want?')" oninput="this.setCustomValidity('')"  required>
             </div>
-       
+
+            <div class="container d-flex justify-content-evenly">
+              <div class="first">
+            <div class="form-check " >
+             <input class="form-check-input" type="checkbox" value="Pepperoni" id="pepperoni" name="mole">
+             <label class="form-check-label" for="flexCheckDefault">
+             </label>
+             Pepperoni
+           </div>
+           <div class="form-check">
+             <input class="form-check-input" type="checkbox" value="Mushrooms" id="mushroom" name="mole" >
+             <label class="form-check-label" for="flexCheckChecked">
+             </label>
+             Mushrooms
+           </div>
+           <div class="form-check">
+             <input class="form-check-input" type="checkbox" value="Bacon" id="bacon" name="mole" >
+             <label class="form-check-label" for="flexCheckChecked">
+               Bacon
+             </label>
+           </div>
+           </div>
+           <div class="second">
            
-            <div class="form-check">
-          
-                <input class="form-check-input" type="radio" name="delivery"  value="deliver" id="delivered"required>
-              <label class="form-check-label" for="flexRadioDefault1">
-                I want it delivered
-              </label>
-              </div>
+           <div class="form-check">
+             <input class="form-check-input" type="checkbox" value="Green Peppers" id="pepper" name="mole" >
+             <label class="form-check-label" for="flexCheckChecked">
+               Green Peppers
+             </label>
+           </div>
+           
+           <div class="form-check">
+             <input class="form-check-input" type="checkbox" value="Sausage" id="sausage" name="mole" >
+             <label class="form-check-label" for="flexCheckChecked">
+               Sausage
+             </label>
+           </div>
 
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="delivery" value="pick" id="picked"   required>
-              <label class="form-check-label" for="flexRadioDefault2">
-                Pick Up
-              </label>
-            </div>
+           <div class="form-check">
+             <input class="form-check-input" type="checkbox" value="Onions" id="onion" name="mole" >
+             <label class="form-check-label" for="flexCheckChecked">
+             </label>
+             Onions
+           </div>
+           </div>
 
+           </div>
+           <p id="errMessage"></p>
 
-      <div class="form-group mt-3">
-        <button type="submit" class="btn text-white  mt-1" >Complete your Order</button>
-        <button type="reset" class="btn text-white  mt-1" >Make another order</button>  
-    </div>   
-    </form>
-   
-    
-     
+      <div class="form-group  text-center mt-3">
+          <button type="submit" id="btnClick" class="btn mt-1" >Complete your Order</button>
+          <button type="reset" class="btn mt-1" >Make another order</button>  
+      </div>     
+      </form>
   </div>
 </div>
 
@@ -269,18 +282,24 @@
           <tr>
             <th scope="col">#</th>
             <th scope="col">Size</th>
-            <th scope="col">crust</th>
+            <th scope="col">Crust</th>
+            <th scope="col">Topping(s)</th>
+            <th scope="col">Quantity</th>
             <th scope="col">Total</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <th scope="row">1</th>
-            <td>..</td>
-            <td>..</td>
-            <td>..</td>
+            <td id="pizzSize"></td>
+            <td id="pizzCrust"></td>
+            <td id="pizzTopping"></td>
+            <td id="pizzQuantity"></td>
+            <td id="pizzTotal"></td>
+
+
           </tr>
-          <tr>
+          <!-- <tr>
             <th scope="row">2</th>
             <td>..</td>
             <td>..</td>
@@ -292,7 +311,7 @@
             <td>..</td>
             <td>..</td>
 
-          </tr>
+          </tr> -->
         </tbody>
       </table>
   </div>
