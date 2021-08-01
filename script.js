@@ -218,23 +218,24 @@ $(document).ready(function () {
     }
 
      
-    $('.addMe').off().click(function(){
+    $('.addedMe').off().click(function(){
         $('#newOrder').append(
             '<tr><th id="pizzTable">'+ '#' + '</th><td id="pizzSize">' + pizzaSize + '</td><td id="pizzCrust">' + pizzaCrust +
                  '</td><td id="pizzTopping">' + pizzaTopping + '</td><td id="pizzQuantity">' + pizzaQuantity + '</td><td id="pizzTotal">' + newTotal.totalCash() 
        );
-    })
-  
+    });
+
+    if($('#myName') !=''){
+
+        $('.addedMe').fadeIn();
+        $('.addMe').hide();
+    };
+
 
         });
 
       
-        // if($('#myName') !=''){
-
-        //     $('.addedMe').fadeIn();
-        //     $('.addMe').hide();
-        // };
-
+    
 
 
        
