@@ -190,6 +190,16 @@ $(document).ready(function () {
       
         
        var  newTotal= new Total(pizzaQuantity,mySize,myCrust,myTopping,myShipping);
+
+//        function grandTotal(){
+//        if($('.addedMe').click()){
+//         var grandTotal = [];
+//             var totalCost  =+ parseInt(newTotal.totalCash());
+//             grandTotal.push(totalCost )
+
+       
+//     }
+// }
        if( myName!='' && pizzaSize !='' &&  pizzaCrust != ''  && pizzaQuantity !='' && check  ){
         $('.hide').fadeIn();
         $('.image-section').hide();
@@ -202,8 +212,8 @@ $(document).ready(function () {
         $('#each-size').text( 'pizza-size : '+ pizzaSize);
         $('#each-crust').text( 'Crust : ' + pizzaCrust);
         $('#each-top').text( 'Toppings : ' + pizzaTopping);
-        $('#each-qty').text( 'Your order : ' + pizzaQuantity)
-        $('#each-total').text( 'Your total bill : ' + newTotal.totalCash());
+        $('#each-qty').text( 'Your order : ' + pizzaQuantity);
+        $('#each-total').text( 'Your total bill : ' + newTotal.totalCash() );
         $('#each-text').text('Thank You for choosing us to serve you ' + myName + ' !'); 
 
         
@@ -216,6 +226,8 @@ $(document).ready(function () {
 
 
     }
+   
+
 
      
     $('.addedMe').off().click(function(){
@@ -230,7 +242,7 @@ $(document).ready(function () {
         $('.addedMe').fadeIn();
         $('.addMe').hide();
     };
-
+   
 
         });
 
