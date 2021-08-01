@@ -22,7 +22,7 @@
 <img src="pics/README pics/number5.png">
 <img src="pics/README pics/number6.png">
 <img src="pics/README pics/number7.png">
-<img src="pics/README pics/number7.png">
+<img src="pics/README pics/number8.png">
 
 
 #### Contacts: 
