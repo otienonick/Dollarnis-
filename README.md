@@ -15,14 +15,14 @@
 
 ### LICENCE
 
-<img src="pics/README pics/number1.png" width=300px>
-<img src="pics/README pics/number2.png" width=300px>
-<img src="pics/README pics/number3.png" width=300px>
-<img src="pics/README pics/number4.png" width=300px>
-<img src="pics/README pics/number5.png" width=300px>
-<img src="pics/README pics/number6.png" width=300px>
-<img src="pics/README pics/number7.png" width=300px>
-<img src="pics/README pics/number7.png" width=300px>
+<img src="pics/README pics/number1.png">
+<img src="pics/README pics/number2.png">
+<img src="pics/README pics/number3.png">
+<img src="pics/README pics/number4.png">
+<img src="pics/README pics/number5.png">
+<img src="pics/README pics/number6.png">
+<img src="pics/README pics/number7.png">
+<img src="pics/README pics/number7.png">
 
 
 #### Contacts: 
