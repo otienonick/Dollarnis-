@@ -331,13 +331,11 @@
 
 </div>
 
-
+<div class="form-group  text-center mt-3">
+  <button type="submit" id="btnClick" class="btn text-white mt-1 addMe" >Complete your Order</button>
+  <!-- <button type="submit" id="btnClick" class="btn text-white mt-1 addedMe" >Add Another Order</button> -->
+</div>     
         
-
-      <div class="form-group  text-center mt-3">
-          <button type="submit" id="btnClick" class="btn text-white mt-1" >Complete your Order</button>
-          <button type="reset" class="btn text-white mt-1" >Make another order</button>  
-      </div>     
       </form>
   </div>
 
@@ -348,7 +346,7 @@
   <div class="container-fluid col-md-9 mb-5  mt-5 hide">
     <div class="container">
       <h3> ORDER SUMMARY</h3>
-      <table class="table">
+      <table class="table" id="newOrder">
         <thead>
           <tr>
             <th scope="col">#</th>
@@ -439,6 +437,8 @@
         <form onsubmit="return false" class="showing">
           <div class="mb-3">
             <p class="text-white">Delivery fee is 200 Ksh</p>
+            <label for="name" class="form-label">Phone number</label>
+            <input type="tel" maxlength="10" name="phone" class="form-control" placeholder="eg 0718849600" id="phone" oninvalid="this.setCustomValidity('fill in your phone number')" oninput="this.setCustomValidity('')"   required>
           
               <label for="name" class="form-label">Location</label>
               <input type="text" name="locate" class="form-control"  id="locate" oninvalid="this.setCustomValidity('Please fill out your location')" oninput="this.setCustomValidity('')"   required>
