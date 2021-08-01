@@ -115,11 +115,20 @@ button{
 .rider{
     color: #fff;
 }
-.locateMe{
+ .locateMe{
+    display: none;
+} 
+
+.deliveryButton{
+    display: none;
+    background-color: #b87b00;
+    border-radius: 30px !important;
+    padding: 2px;
+
+}
+.comfirmThis{
     display: none;
 }
-
-
 
 label{
     color: #b87b00;
