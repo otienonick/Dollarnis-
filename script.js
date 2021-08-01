@@ -27,15 +27,19 @@ Total.prototype.totalCash = function() {
    
         var myLocation = document.getElementById('locate').value;
         var myName = $('#myName').val();
+        var myPhone = $('#phone').val();
+      
 
     
-        if (myLocation != '') {
+        if (myLocation != ''&& myPhone !=''&& myPhone.length ===10) {
            document.getElementById('show-saved').innerHTML = myName + " Lucky for you we are only 15 minutes away from " + myLocation +" !"
            $('.showing').slideToggle();
            $('.comfirmThis').slideToggle();
               $(document).on('click', '#submit-btn', function(e){
                  e.preventDefault();
              });
+
+
            
       
         }
@@ -208,15 +212,37 @@ $(document).ready(function () {
     }else {
 
         return false;
+
+
+
     }
 
+     
+    $('.addMe').off().click(function(){
+        $('#newOrder').append(
+            '<tr><th id="pizzTable">'+ '#' + '</th><td id="pizzSize">' + pizzaSize + '</td><td id="pizzCrust">' + pizzaCrust +
+                 '</td><td id="pizzTopping">' + pizzaTopping + '</td><td id="pizzQuantity">' + pizzaQuantity + '</td><td id="pizzTotal">' + newTotal.totalCash() 
+       );
+    })
+  
+
         });
-          
+
+      
+        // if($('#myName') !=''){
+
+        //     $('.addedMe').fadeIn();
+        //     $('.addMe').hide();
+        // };
+
+
 
        
         $('.show-locate').click(function(){
             $('.deliveryButton').slideToggle();
-        })
+        });
+
+   
     
     });
 
