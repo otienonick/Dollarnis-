@@ -8,17 +8,17 @@ Order.prototype.fullOrder = function () {
     return   this.size + ' pizza with a crust of ' + this.crust + " and a topping of " + this.topping ;
 };
 };
-function Total(quantity, pizzaPrice,crustPrice,toppingPrice){
+function Total(quantity, pizzaPrice,crustPrice,toppingPrice,shipped){
     this.quantity = quantity;
     this.pizzaPrice = pizzaPrice;
     this.crustPrice = crustPrice;
     this.toppingPrice = toppingPrice;
-    // this.shipping = shipping;
+    this.shipped = shipped;
 
 
 
 Total.prototype.totalCash = function() {
-    return  this.quantity * (this.pizzaPrice + this.crustPrice + this.toppingPrice )
+    return  this.quantity * (this.pizzaPrice + this.crustPrice + this.toppingPrice + this.shipped )
 };
 };
 
@@ -31,7 +31,8 @@ Total.prototype.totalCash = function() {
     
         if (myLocation != '') {
            document.getElementById('show-saved').innerHTML = myName + " Lucky for you we are only 15 minutes away from " + myLocation +" !"
-           $('.showing').slideToggle()
+           $('.showing').slideToggle();
+           $('.comfirmThis').slideToggle();
               $(document).on('click', '#submit-btn', function(e){
                  e.preventDefault();
              });
@@ -136,7 +137,7 @@ $(document).ready(function () {
                      
     if (chb[0].checked){
                         document.getElementById("errMessage").innerHTML = "";
-                        return box1
+                        return box1;
 
                 }else if(chb[1].checked){
                                     document.getElementById("errMessage").innerHTML = "";
@@ -165,9 +166,26 @@ $(document).ready(function () {
                 }
 
             }
-            var check = checkBox();     
+    
+            var check = checkBox();
+
+            var myShipping = addDelivery();
+            function addDelivery(){
+                var checkDelivery = document.getElementsByName('weDeliver');
+                if(checkDelivery[0].checked){
+                    var money =  200;
+                    return money;
+                }else if(!checkDelivery[0].checked){
+                    var noMoney = 0;
+                    return noMoney;
+                }
+         
+      
+            }
+            
+      
         
-       var  newTotal= new Total(pizzaQuantity,mySize,myCrust,myTopping);
+       var  newTotal= new Total(pizzaQuantity,mySize,myCrust,myTopping,myShipping);
        if( myName!='' && pizzaSize !='' &&  pizzaCrust != ''  && pizzaQuantity !='' && check  ){
         $('.hide').fadeIn();
         $('.image-section').hide();
@@ -187,18 +205,22 @@ $(document).ready(function () {
         
        
 
-    }else{
+    }else {
+
         return false;
     }
 
         });
-        $('#show-locate').click(function(){
-            $('.locateMe').slideToggle();
+          
+
+       
+        $('.show-locate').click(function(){
+            $('.deliveryButton').slideToggle();
         })
-
-
     
     });
+
+  
 
 
 // scroll up button
@@ -226,9 +248,36 @@ $(document).ready(function() {
 
 
 
-// function taken(){
-//     var myName = document.getElementById('name');
-//     var myEmail = document.getElementById('email');
 
-//      document.getElementById('takeMe').click(  window.location = 'https://www.google.com/' ,myName.value = '' , myEmail.value = "")
-// }
+
+
+
+
+      
+            // function checkDelivery(){
+
+            //     var radioCheck = document.getElementsByName('myRadios');
+            //     const radio1  = document.getElementById('delivaryMade');
+            //     const radio2  = document.getElementById('pickedUp');
+            //     var amDelivering = 200;
+            //     var amPicking = 0;
+              
+              
+              
+            //      if(!(radioCheck[0].checked || radioCheck[1].checked))
+            //      {
+            //      return false;
+            //     }else
+            //     {
+            //         if (radio1.checked) {
+            //             radioCheck =radio1.value
+            //             return amDelivering;      
+            //         }else if (radio2.checked){
+            //             radioCheck = radio2.value;
+            //             return amPicking;
+              
+            //         }
+            //     }
+              
+            //   }
+              
