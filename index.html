@@ -16,7 +16,7 @@
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="./script.js"></script>
-    <title>Pizza Inn</title>
+    <title>DOLLARNI'S INN</title>
 </head>
 <body>
     <nav class="navbar ">
@@ -323,13 +323,27 @@
            </div>
            <p id="errMessage"></p>
 
+<div class="form-check">
+  <input class="form-check-input show-locate" type="checkbox" name="weDeliver" id="myDelivery" value="1">
+  <label class="form-check-label" for="flexCheckDefault">
+    want us to make Delivery?
+  </label>
+
+</div>
+
+
+        
+
       <div class="form-group  text-center mt-3">
           <button type="submit" id="btnClick" class="btn text-white mt-1" >Complete your Order</button>
           <button type="reset" class="btn text-white mt-1" >Make another order</button>  
       </div>     
       </form>
   </div>
+
+ 
 </div>
+
 
   <div class="container-fluid col-md-9 mb-5  mt-5 hide">
     <div class="container">
@@ -373,7 +387,7 @@
       </table>
       </div>
 
-  <div class="text-white">
+  <div class="text-white ">
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -399,21 +413,62 @@
     </div>
   </div>
 </div>
-    <button id="show-locate" value="200" class="btn"><i class="bi bi-truck rider"></i></button>Want us to make a delivery?
-    <button class="btn m-3 text-white" data-bs-toggle="modal" data-bs-target="#exampleModal" >Checkout</button>
-    </div>
-    <div class=" locateMe col-lg-4">
-  <form onsubmit="return false" class="showing">
-    <div class="mb-3">
-      <p class="text-white">Delivery fee is 200 Ksh</p>
 
-        <label for="name" class="form-label">Location</label>
-        <input type="text" name="locate" class="form-control" id="locate" oninvalid="this.setCustomValidity('Please fill out your location')" oninput="this.setCustomValidity('')"   required>
-    </div>
-    <button type="submit" class="btn btn-primary" onclick="validate()" id="submit-btn">Save</button>
-</form>
-<p class="text-white" id="show-saved"></p>
+
+
+
+
+<div>
+  <a class="btn text-white deliveryButton" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Your location details</a>
+
+<button class="btn m-3 text-white" type="submit" data-bs-toggle="modal" data-bs-target="#exampleModal" >Checkout</button>
+
 </div>
+</div>
+
+
+
+<div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalToggleLabel"><img src="./pics/logo.png" alt="logo">DOLLARNI'S</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form onsubmit="return false" class="showing">
+          <div class="mb-3">
+            <p class="text-white">Delivery fee is 200 Ksh</p>
+          
+              <label for="name" class="form-label">Location</label>
+              <input type="text" name="locate" class="form-control"  id="locate" oninvalid="this.setCustomValidity('Please fill out your location')" oninput="this.setCustomValidity('')"   required>
+          </div>
+          <button type="submit"  class="btn btn-primary" onclick="validate()" id="submit-btn">Save</button>
+          </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary comfirmThis" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">Comfirm</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalToggleLabel2"><img src="./pics/logo.png" alt="logo">DOLLARNI'S</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p id="show-saved"></p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary"  data-bs-toggle="modal" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 
   </div>
 
